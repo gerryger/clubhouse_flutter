@@ -51,7 +51,13 @@ class HomeScreen extends StatelessWidget {
         ],
       ),
       body: ListView(
-        children: [],
+        padding: const EdgeInsets.fromLTRB(20.0, 20.0, 20.0,
+            120.0), // bottom padding is set to 120.0 so that 'start a room' button won't block this listview
+        children: [
+          UpcomingRooms(
+            upcomingRooms: upcomingRoomsList,
+          ),
+        ],
       ),
     );
   }
